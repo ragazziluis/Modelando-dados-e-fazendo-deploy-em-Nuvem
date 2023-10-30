@@ -1,3 +1,9 @@
+-- Cria o banco de dados se não existir (substitua 'nomedobanco' pelo nome que desejar)
+CREATE DATABASE IF NOT EXISTS nomedobanco;
+
+-- Seleciona o banco de dados recém-criado ou já existente
+USE nomedobanco;
+
 -- Tabela para Pacientes
 CREATE TABLE Pacientes (
     PacienteID INT PRIMARY KEY,
@@ -7,7 +13,7 @@ CREATE TABLE Pacientes (
     Endereco VARCHAR(255)
 );
 
--- Tabela para Veículos Médico
+-- Tabela para Veículos Médicos
 CREATE TABLE Veiculos (
     VeiculoID INT PRIMARY KEY,
     Placa VARCHAR(15),
@@ -15,7 +21,7 @@ CREATE TABLE Veiculos (
     Capacidade INT
 );
 
--- Tabela para Unidades Saúde
+-- Tabela para Unidades de Saúde
 CREATE TABLE UnidadesDeSaude (
     UnidadeID INT PRIMARY KEY,
     Nome VARCHAR(100),
@@ -54,3 +60,4 @@ CREATE TABLE Transportes (
     FOREIGN KEY (VeiculoID) REFERENCES Veiculos(VeiculoID),
     FOREIGN KEY (RotaID) REFERENCES Rotas(RotaID)
 );
+
