@@ -1,8 +1,8 @@
--- Cria o banco de dados se não existir (substitua 'nomedobanco' pelo nome que desejar)
-CREATE DATABASE IF NOT EXISTS nomedobanco;
+-- Cria o banco de dados se não existir 
+CREATE DATABASE IF NOT EXISTS deploy-nuvem-s2;
 
 -- Seleciona o banco de dados recém-criado ou já existente
-USE nomedobanco;
+USE deploy-nuvem-s2;
 
 -- Tabela para Pacientes
 CREATE TABLE Pacientes (
